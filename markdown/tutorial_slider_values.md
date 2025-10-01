@@ -83,7 +83,7 @@ frequencyLabel.setText ("Frequency", juce::dontSendNotification);
 frequencyLabel.attachToComponent (&frequencySlider, true); // [4]
 ```
 
-The [Label::attachToComponent()](https://docs.juce.com/master/classLabel.html#a3c2397c0da1249f9e27e2279e0f2d4eb "Makes this label "stick to" another component.") function [4] is really useful for placing a label adjacent to another component. The second argument, `true` , positions the label to the left of the other component (`false` would position it above). As we will see shortly, this avoids us having to position the labels manually in the `MainContentComponent::resized()` function.
+The [Label::attachToComponent()](https://docs.juce.com/master/classLabel.html#a3c2397c0da1249f9e27e2279e0f2d4eb) function [4] is really useful for placing a label adjacent to another component. The second argument, `true` , positions the label to the left of the other component (`false` would position it above). As we will see shortly, this avoids us having to position the labels manually in the `MainContentComponent::resized()` function.
 
 The `durationSlider` and the `durationLabel` members are set up similarly, but the range of this slider is set to be the reciprocal of the range of the `frequencySlider` member:
 
@@ -101,7 +101,7 @@ durationLabel.attachToComponent (&durationSlider, true);
 
 ## Positioning the slider
 
-The sliders are positioned in the `MainContentComponent::resized()` function. Since we used the [Label::attachToComponent()](https://docs.juce.com/master/classLabel.html#a3c2397c0da1249f9e27e2279e0f2d4eb "Makes this label "stick to" another component.") function to attach the labels to the sliders, these are positioned to the left of the sliders automatically.
+The sliders are positioned in the `MainContentComponent::resized()` function. Since we used the [Label::attachToComponent()](https://docs.juce.com/master/classLabel.html#a3c2397c0da1249f9e27e2279e0f2d4eb) function to attach the labels to the sliders, these are positioned to the left of the sliders automatically.
 
 ```cpp
 void resized() override
